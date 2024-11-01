@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+#balance {
+  display: none;
+}
+
+#login {
+  margin: 20px 0;
+}
+
+#scan {
+  display: none;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.gifs {
+  width: auto;
+  height: 50vh;
+  border: 1px solid black;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}

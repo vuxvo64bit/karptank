@@ -4,31 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karp Tank Investments</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        #balance {
-            display: none;
-        }
-        #login {
-            margin: 20px 0;
-        }
-        #scan {
-            display: none;
-            font-size: 1.2em;
-            color: #555;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1>Welcome to Karp Tank Investments</h1>
     <div id="login">
         <p>Please enter the password to access your account:</p>
         <input type="password" id="password" placeholder="Enter Password">
-        <button onclick="login()">Login</button>
+        <button><a onClick="login()">Logi</a><a onClick="falseLogin()">n</a>
+        </button>
         <p id="error" style="color: red;"></p>
     </div>
     <div id="scan">
@@ -36,34 +21,14 @@
     </div>
     <div id="balance">
         <h2>Your Balance:</h2>
-        <p>1,000,000 Karp Tank Coins</p>
+        <p>69,420,420 Karp Coins</p>
         <button onclick="logout()">Logout</button>
+        <div class="gifs">
+          <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3VpNzloN3liMHVhY204b2VrNzhqdzQ4em94ZHppaThzNWk1YnA4MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/15wC7XdIXN5q8o6fr9/giphy.gif" alt="">
+          <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHZ2Y3U4anZkbjI0eGRhMGN3d3EwaWxsN3JlNDB4MHVrcTVhdzFvaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YnkMcHgNIMW4Yfmjxr/giphy.gif" alt="">
+        </div>
     </div>
-
-    <script>
-        function login() {
-            const password = document.getElementById('password').value;
-            const errorElement = document.getElementById('error');
-            if (password === 'karp') {
-                document.getElementById('login').style.display = 'none';
-                document.getElementById('scan').style.display = 'block';
-                errorElement.textContent = '';
-
-                // Simulate the 5-second iris scan
-                setTimeout(() => {
-                    document.getElementById('scan').style.display = 'none';
-                    document.getElementById('balance').style.display = 'block';
-                }, 5000);
-            } else {
-                errorElement.textContent = 'Invalid password, please try again.';
-            }
-        }
-
-        function logout() {
-            document.getElementById('balance').style.display = 'none';
-            document.getElementById('login').style.display = 'block';
-            document.getElementById('password').value = '';
-        }
-    </script>
+    <div id="scan-fail" style="color: red">
+    </div>
 </body>
 </html>
